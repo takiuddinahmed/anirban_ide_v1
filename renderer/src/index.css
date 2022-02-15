@@ -1,0 +1,195 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mainBody {
+  display: flex;
+  height: 100%;
+}
+.mainBody > div {
+  min-width: 14rem;
+}
+
+.resize {
+  resize: horizontal;
+  overflow: auto;
+}
+.resize-rtl,
+.codeViewer {
+  direction: rtl;
+}
+.resize-ltr {
+  direction: ltr;
+}
+.logic {
+  clip-path: polygon(
+    0 0,
+    10% 0%,
+    15% 15%,
+    20% 0%,
+    100% 0,
+    100% 85%,
+    20% 85%,
+    15% 100%,
+    10% 85%,
+    0 85%
+  );
+  /* @apply flex items-center justify-center gap-2 pt-3 px-3 pb-4 w-48  cursor-pointer text-white; */
+}
+
+/* Have to work */
+.moveUp {
+  margin-top: -7px;
+}
+
+.fixScreen {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
+  overflow-x: auto;
+}
+.workSpaceTopClearance {
+  top: 110px;
+}
+
+.codeTopClearance {
+  top: 42px;
+}
+.logicBlock {
+  padding-top: 8px;
+  padding-bottom: 13px;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 200px;
+  /* width: 0.61%; */
+}
+
+.fixCenter {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.top-100 {
+  top: 100%;
+}
+
+.dltBtn {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  z-index: 100;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.noScrollBar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.noScrollBar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.disable-text-selection {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.header {
+  background-color: #97e7ff;
+  height: 35px;
+}
+.logicBlockHeader {
+  background-color: #08b7a8;
+  height: 44px;
+  font-size: 1.1rem;
+}
+.workSpaceHeader {
+  background-color: #92278f;
+  height: 42px;
+}
+.workSpaceHeader2 {
+  background-color: #a8a9ad;
+}
+.workSpaceBody {
+  background-color: #e2e2e2;
+}
+.trashIcon {
+  color: #f25a29;
+}
+.codeHeader {
+  background-color: #1d75bd;
+  height: 44px;
+  font-size: 1.1rem;
+}
+.logicInitialWidth {
+  width: 21%;
+}
+.codeInitialWidth {
+  width: 23%;
+}
+
+.status {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 30%;
+  min-width: 30%;
+  padding: 1rem;
+  background-color: #fff;
+
+  border-radius: 5px;
+}
+
+.word-wrap {
+  text-align: justify;
+}
+
+.shadow {
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  -webkit-box-shadow: -2px -1px 15px 7px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: -3px -2px 30px 14px rgba(0, 0, 0, 0.425);
+  box-shadow: -4px -3px 30px 11px rgba(87, 86, 86, 0.35);
+}
+
+.loading-img {
+  transform: scale(0.8);
+}

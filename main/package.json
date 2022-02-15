@@ -1,0 +1,19 @@
+{
+  "name": "anirban-ide",
+  "version": "1.0.0",
+  "description": "A visual IDE for Anirban bot",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "rebuild-serial": "electron-rebuild -f -w serialport",
+    "package": "electron-packager . anirban --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icon.ico --prune=true --out=../release-builds --version-string.CompanyName=\"Ministry of Codes\" --version-string.FileDescription=\"anirban ide\" --version-string.ProductName=\"anirban\""
+  },
+  "author": "Takiuddin Ahmed <takiuddinahmed@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "arduino-cli": "^0.37.0",
+    "log-to-file": "^3.0.0",
+    "serialport": "^9.2.8",
+    "uuid": "^8.3.2"
+  }
+}
